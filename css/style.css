@@ -91,40 +91,18 @@ a {
   padding: 18px 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  /* Changed from space-between to center */
+  justify-content: center; 
 }
 
 .logo {
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.2px;
+  text-decoration: none; /* Added to ensure no underline */
+  color: inherit; /* Keeps your existing text color */
 }
 
-.nav-links {
-  display: flex;
-  gap: 24px;
-  color: var(--muted);
-}
-
-.nav-links a,
-.nav-cta {
-  transition: 0.25s ease;
-}
-
-.nav-links a:hover,
-.nav-cta:hover {
-  color: var(--text);
-  transform: translateY(-1px);
-}
-
-.nav-cta {
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(118, 183, 255, 0.18), rgba(155, 225, 255, 0.12));
-  border: 1px solid rgba(167, 210, 255, 0.18);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-}
 
 .page {
   position: relative;
