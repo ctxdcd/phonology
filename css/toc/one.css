@@ -265,6 +265,344 @@ h2 {
 }
 
 /* ==========================================================================
+   @group 05B. SECTION CONTENT CARDS
+   ========================================================================== */
+
+.section-body {
+  display: grid;
+  gap: 22px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(172, 201, 255, 0.12);
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+}
+
+.intro-card {
+  padding: 30px;
+}
+
+.lead-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-main);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.key-points {
+  display: grid;
+  gap: 16px;
+}
+
+.key-point {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.key-point:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.key-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(118, 183, 255, 0.08);
+  border: 1px solid rgba(118, 183, 255, 0.18);
+  color: var(--apple-blue);
+}
+
+.key-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.key-point h3 {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: var(--text-main);
+}
+
+.key-point p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-sub);
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.content-card h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 10px 0 18px;
+  letter-spacing: -0.02em;
+}
+
+.card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mini-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--apple-blue);
+  background: rgba(118, 183, 255, 0.08);
+  border: 1px solid rgba(118, 183, 255, 0.16);
+}
+
+.stack-list,
+.compare-list {
+  display: grid;
+  gap: 14px;
+}
+
+.stack-item,
+.compare-item {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stack-item {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.stack-dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--apple-blue), var(--accent-2));
+  box-shadow: 0 0 0 4px rgba(118, 183, 255, 0.12);
+}
+
+.stack-item strong,
+.compare-title {
+  display: block;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.stack-item p,
+.compare-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-sub);
+}
+
+.source-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+.source-label {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+}
+
+.content-explainer {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-sub);
+  margin: 6px 0 18px;
+  letter-spacing: -0.01em;
+  max-width: 92%;
+}
+
+@media (max-width: 768px) {
+  .split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-card {
+    padding: 20px;
+  }
+
+  .lead-text {
+    font-size: 16px;
+  }
+
+  .content-card h3 {
+    font-size: 19px;
+  }
+}
+
+/* ==========================================================================
+   @group 05C. TRANSITION CARD
+   ========================================================================== */
+
+.transition-card {
+  margin: 6px 0 6px;
+  padding: 18px 22px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(118, 183, 255, 0.08),
+    rgba(155, 225, 255, 0.04)
+  );
+  border: 1px solid rgba(118, 183, 255, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.transition-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.transition-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(118, 183, 255, 0.12);
+  border: 1px solid rgba(118, 183, 255, 0.2);
+  color: var(--apple-blue);
+  flex-shrink: 0;
+}
+
+.transition-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.transition-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-sub);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .transition-content {
+    align-items: flex-start;
+  }
+
+  .transition-text {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================================================
+   @group 05D. CONCLUSION CARD
+   ========================================================================== */
+
+.conclusion-card {
+  margin-top: 28px;
+  padding: 26px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.conclusion-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.conclusion-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(118, 183, 255, 0.12);
+  border: 1px solid rgba(118, 183, 255, 0.2);
+  color: var(--apple-blue);
+}
+
+.conclusion-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.conclusion-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+}
+
+.conclusion-body p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-sub);
+  margin-bottom: 18px;
+}
+
+.conclusion-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-main);
+  background: rgba(118, 183, 255, 0.08);
+  border: 1px solid rgba(118, 183, 255, 0.18);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .conclusion-card {
+    padding: 20px;
+  }
+
+  .conclusion-body p {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================================
    @group 06. ANIMATIONS
    ========================================================================== */
 
@@ -302,3 +640,4 @@ h2 {
     font-size: 28px;
   }
 }
+
