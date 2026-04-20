@@ -602,6 +602,7 @@ h2 {
   }
 }
 
+
 /* ==========================================================================
    @group 06. ANIMATIONS
    ========================================================================== */
@@ -641,3 +642,51 @@ h2 {
   }
 }
 
+/* ==========================================================================
+   @group 08B. EXAMPLE CARD MODIFIER
+   ========================================================================== */
+
+.example-card {
+  border: 1px solid rgba(118, 183, 255, 0.22);
+  background: linear-gradient(
+    135deg,
+    rgba(118, 183, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle glow effect for focus */
+.example-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(118, 183, 255, 0.12),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* make content sit above glow */
+.example-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   @group 08C. EXAMPLE CARD TYPOGRAPHY SPACING
+   ========================================================================== */
+
+.example-card .mini-badge {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.example-card h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
